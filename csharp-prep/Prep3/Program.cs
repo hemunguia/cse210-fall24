@@ -6,6 +6,7 @@ class Program
     static void Main(string[] args)
     {
         string response;
+        int counter = 0;
         do
         {
             Random randomGenerator = new();
@@ -25,10 +26,13 @@ class Program
                 {
                     Console.WriteLine("Higher");
                 }
+
+                counter += 1;
             }
              while (magicN != number);
             
             Console.WriteLine("You guessed it!");
+            Console.WriteLine($"After {counter} attempts");
             
             Console.WriteLine("Do you want to continue? ");
             response = Console.ReadLine();
